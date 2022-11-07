@@ -26,8 +26,6 @@ public class PassengerService {
     @Retryable(value = Exception.class, maxAttempts = 10, backoff = @Backoff(value = 1000))
     public ResponseTemplateVO getPassengerWithBilling(Integer passengerId)
     {
-        System.out.println("recall" + ++count);
-
         ResponseTemplateVO vo = new ResponseTemplateVO();
         Passenger passenger = passengerRepository.findPassengerById(passengerId);
 
