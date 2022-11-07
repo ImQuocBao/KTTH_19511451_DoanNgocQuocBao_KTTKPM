@@ -21,4 +21,9 @@ public class BillingController {
     public Billing getBillingById(@PathVariable("id") Integer id) {
         return billingService.getBillingById(id);
     }
+
+    @GetMapping("/passenger/{passengerId}")
+    public Billing getBillingByPassengerId(@PathVariable("passengerId") String passengerId) {
+        return billingService.getBillingByPassengerId(passengerId);
+    }
 }

@@ -19,4 +19,7 @@ public class BillingService {
         return billingRepository.findById(id).get();
     }
 
+    public Billing getBillingByPassengerId(String passengerId) {
+        return billingRepository.findBillingByPassengerId(passengerId);
+    }
 }
